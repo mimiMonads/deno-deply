@@ -21,5 +21,8 @@
     "pug": "^3.0.2",
     "@feathersjs/schema": "latest",
     "@sinclair/typebox": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
   }
 }
