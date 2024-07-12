@@ -2,7 +2,9 @@ import { wrap } from "vixeny";
 import { globalOptions } from "../globalOptions.ts";
 
 export default wrap(globalOptions)()
-  .stdPetition({
+  .customPetition({
     path: "/ping",
-    f: () => "pong",
+    f: ({ headers }) => new Response('pong', {
+      headers
+    }),
   });

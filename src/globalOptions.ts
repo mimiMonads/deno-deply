@@ -12,7 +12,7 @@ const values = runtime.arguments();
 
 const globalOptions = plugins.globalOptions({
   cors: {
-    allowOrigins: '*'
+    allowOrigins: '*',
   },
   ...(values?.liveReloading
     ? {
