@@ -1,0 +1,11 @@
+doctype html
+html
+  head
+    title= pageTitle
+    link(rel="stylesheet", href="/css/main.css")
+  body
+    include ../components/header.pug
+    
+    block content
+    script(src="/mjs/main.mjs" type='module')
+    include ../components/footer.pug
