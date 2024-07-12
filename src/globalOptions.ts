@@ -11,6 +11,9 @@ import typescriptP from "./plugins/typescript.ts"
 const values = runtime.arguments();
 
 const globalOptions = plugins.globalOptions({
+  cors: {
+    allowOrigins: '*'
+  },
   ...(values?.liveReloading
     ? {
       debugging: {
