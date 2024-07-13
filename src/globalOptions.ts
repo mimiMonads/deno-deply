@@ -3,6 +3,7 @@ import { injectable } from "vixeny-perspective";
 
 import pugP from "./plugins/pug.ts"
 import typescriptP from "./plugins/typescript.ts"
+import typebox from "./plugins/typebox.ts"
 
 
 
@@ -13,6 +14,9 @@ const values = runtime.arguments();
 const globalOptions = plugins.globalOptions({
   cors: {
     allowOrigins: '*',
+  },
+  cyclePlugin:{
+    ...typebox
   },
   ...(values?.liveReloading
     ? {
