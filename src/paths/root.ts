@@ -2,11 +2,7 @@ import { wrap } from "vixeny";
 import { globalOptions } from "../globalOptions.ts";
 
 export default wrap(globalOptions)()
-  .customPetition({
+  .stdPetition({
     path: "/ping",
-    f: () => new Response('pong', {
-      headers: {
-        "Access-Control-Allow-Origin": "*"
-      }
-    }),
+    f: () => null,
   });
