@@ -24,8 +24,7 @@ const globalOptions = plugins.globalOptions({
         }),
       },
     }
-    : {}),
-  cyclePlugin: { },
+    : {})
 });
 
 const cryptoKey = {
